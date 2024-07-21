@@ -33,7 +33,7 @@ public class RunnableLambdaExample {
 
         new Thread(() -> System.out.println("Inside Lambda Runnable 4")).start();
 
-        
+
     }
 }
 
