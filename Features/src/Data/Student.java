@@ -8,6 +8,8 @@ public class Student {
     private int gradeLevel;
     private double gpa;
     private String gender;
+
+
     private int noteBooks;
     private Optional<Bike> bike;
 
