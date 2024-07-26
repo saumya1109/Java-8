@@ -11,6 +11,7 @@ public class CosumerMethodReference {
     //Syntax--> className::methodName
     static Consumer<Student> c2= System.out::println;
 
+    //Syntax--> className::instanceMethodName
     static Consumer<Student> c3 =Student::printListOfActivities;
 
     public static void main(String[] args) {
