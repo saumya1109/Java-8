@@ -13,7 +13,7 @@ public class LambdaVariable2 {
 
 
         //Can work with static variables
-        
+
         Consumer<Integer> c1= (i)->{
            // value++;    <----Variable used in lambda expression should be final or effectively final
             System.out.println(value+i);
