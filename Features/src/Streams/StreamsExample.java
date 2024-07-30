@@ -11,14 +11,18 @@ import java.util.stream.Collectors;
 public class StreamsExample {
     public static void main(String[] args) {
 
-        Predicate<Student> studentPredicate= (student) -> student.getGradeLevel() >= 3;
+        //Predicate<Student> studentPredicate= (student) -> student.getGradeLevel() >= 3;
         Predicate<Student> studentPredicateGPA= (student) -> student.getGpa() >= 3.9;
 
         Map<String, List<String>> studentMap = StudentDataBase.getAllStudents()
                 .stream()
-                .filter(studentPredicate)
-                .filter(studentPredicateGPA)
-                .collect(Collectors.toMap(Student::getName, Student::getActivities));
+                .peek((student)-> {
+                    System.out.println(student);
+                })
+                //Peek accepts a consumer
+                .filter((student) -> student.getGradeLevel() >= 3)  // Stream<Student>
+                .filter(studentPredicateGPA)                        // Stream<Student>
+                .collect(Collectors.toMap(Student::getName, Student::getActivities)); //<Map> () desired result
 
         System.out.println(studentMap);
     }
