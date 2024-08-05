@@ -12,7 +12,9 @@ public class StreamReduceExample {
     public static void main(String[] args) {
         List<Integer> integers = Arrays.asList(1, 3, 5, 7);
         System.out.println(performMultiplication(integers));
+
        Optional<Integer> result =performMultiplicationWithoutIdentity(integers);
+
         System.out.println(result.get());
         System.out.println(result.isPresent());
 
