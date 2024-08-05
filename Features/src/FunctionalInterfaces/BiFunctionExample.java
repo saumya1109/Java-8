@@ -38,7 +38,9 @@ public class BiFunctionExample {
     public static Map<String, Double> biFunctionExample() {
         BiFunction<List<Student>, Predicate<Student>, Map<String, Double>> biFunction =
                 (students, p1) -> {
+
                     Map<String, Double> studentMap = new HashMap<>();
+
                     students.forEach(
                             (student) -> {
                                 if (p1.test(student)) {
