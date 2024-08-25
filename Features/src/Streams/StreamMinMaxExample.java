@@ -8,10 +8,11 @@ import java.util.Optional;
 public class StreamMinMaxExample {
     public static void main(String[] args) {
         List<Integer> integers = Arrays.asList(6,7,8,9,10);
+
         System.out.println(getMax(integers));
         System.out.println(getMax(new ArrayList<>()));  //<-- incase of empty list we are getting 0( default value)
-
         Optional<Integer> result = getMaxWithOptional(new ArrayList<>());
+
         if(result.isPresent()){
             System.out.println("Max"+ result.get());
         }else{
