@@ -15,6 +15,7 @@ public class StreamOfGenerateIterateExample {
                 .forEach(System.out::println);
 
         Supplier<Integer> integerSupplier = new Random()::nextInt;
+
         Stream.generate(integerSupplier)
                 .limit(10)
                 .forEach(System.out::println);
