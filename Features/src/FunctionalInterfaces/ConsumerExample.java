@@ -55,8 +55,8 @@ public class ConsumerExample {
     public static void printNameAndActivities() {
         List<Student> students = StudentDataBase.getAllStudents();
         students.forEach(c4.andThen(c5));
-
     }
+
     public static void printNameAndActivitiesUsingCondition() {
         List<Student> students = StudentDataBase.getAllStudents();
         System.out.println("\n Using Condition");
