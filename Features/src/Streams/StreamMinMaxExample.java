@@ -10,6 +10,7 @@ public class StreamMinMaxExample {
         List<Integer> integers = Arrays.asList(6,7,8,9,10);
 
         System.out.println(getMax(integers));
+        System.out.println(getMax1(integers));
         System.out.println(getMax(new ArrayList<>()));  //<-- incase of empty list we are getting 0( default value)
         Optional<Integer> result = getMaxWithOptional(new ArrayList<>());
 
@@ -26,6 +27,12 @@ public class StreamMinMaxExample {
     public static int getMax(List<Integer> integers){
       return  integers.stream()
                 .reduce(0,(int1, int2) -> (int1>int2) ? int1 : int2);
+
+    }
+
+    public static int getMax1(List<Integer> integers){
+        return  integers.stream()
+                .reduce(0,Integer::max);
 
     }
 
