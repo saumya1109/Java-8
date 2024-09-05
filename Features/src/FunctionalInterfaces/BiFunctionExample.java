@@ -28,7 +28,7 @@ public class BiFunctionExample {
 
         BiFunction<String, String, Integer> b1 = (s1, s2) -> {
             int maxLength = (s1.length() > s2.length()) ? s1.length() : s2.length();
-            return maxLength;
+           return maxLength;
         };
 
         System.out.println(b1.apply("apples", "oranges"));
